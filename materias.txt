@@ -1,5 +1,9 @@
-AEDS 3: 3: 1
-AEDS 3: 3: 1
-AEDS 3: 5: 1
-AEDS 3: 5: 1
-Bioestatistica:52:112
+
+AEDS 3:15:4
+Introdução a IA:35: 9
+Programação 2:14: 3
+Bioestatistica:15: 3
+Programação 3:14: 4
+Avaliacao critica:15: 3
+Bioestatistica 1:10: 2
+Doenças Infecciosas:45: 9
