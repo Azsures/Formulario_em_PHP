@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to right, red, blue);
+    background: linear-gradient(to right, black, white);
 }
 .container {
     width: 600px;
@@ -71,3 +71,7 @@ body {
   .dropdown:hover .dropbtn {
     background-color: #3e8e41;
   }
+  .question-text {
+    font-size: large;
+    text-decoration: underline;
+}

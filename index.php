@@ -108,7 +108,7 @@
             <p for="nome">Identificação: (Opcional)</p>
             <input type="text" id="nome" name="nome">
 
-            <label for="matriculado"> Você está atualmente matriculado em:</label>
+            <label for="matriculado"> <p class="question-text"> Você está atualmente matriculado em: </p> </label>
             <ul class="quiz">
                 <label
                     ><input type="radio" name="matriculado" value="Mestrado" required/><span
@@ -127,8 +127,8 @@
                 </li>
             </ul>
 
-            <label for="periodo"> Qual semestre você está cursando em seu curso de pós graduação no PPGCS? 
-Lembre-se que comumente o curso de mestrado é cumprido em 4 semestres, o curso de doutorado em 8 semestres e o pos-doc em 2 semestres.</label>
+            <label for="periodo"> <p class="question-text"> Qual semestre você está cursando em seu curso de pós graduação no PPGCS? 
+Lembre-se que comumente o curso de mestrado é cumprido em 4 semestres, o curso de doutorado em 8 semestres e o pos-doc em 2 semestres. </p></label>
             <ul class="quiz">
                 <label
                     ><input type="radio" name="periodo" value="1" required/><span
@@ -173,36 +173,7 @@ Lembre-se que comumente o curso de mestrado é cumprido em 4 semestres, o curso 
                 </li>
             </ul>
 
-            <label for="opiniao">Opinião:</label>
-            <ul class="quiz">
-                <label
-                    ><input type="radio" name="opiniao" value="1" required/><span
-                        >1</span
-                    ></label
-                >
-                <label
-                    ><input type="radio" name="opiniao" value="2" /><span
-                        >2</span
-                    ></label
-                >            
-                <label
-                    ><input type="radio" name="opiniao" value="3" /><span
-                        >3</span
-                    ></label
-                >            
-                <label
-                    ><input type="radio" name="opiniao" value="4" /><span
-                        >4</span
-                    ></label
-                >
-                <label
-                    ><input type="radio" name="opiniao" value="5" /><span
-                        >5</span
-                    ></label
-                >
-            </ul>
-
-            <label for="estrutura"> A estrutura geral da disciplina foi bem concebida/organizada:</label>
+            <label for="estrutura"> <p class="question-text">A estrutura geral da disciplina foi bem concebida/organizada:</p></label>
             <ul class="quiz">
                 <label
                     ><input type="radio" name="estrutura" value="1" required/><span
@@ -231,7 +202,7 @@ Lembre-se que comumente o curso de mestrado é cumprido em 4 semestres, o curso 
                 ><br>
             </ul>
             
-            <label for="cargaH"> A carga horária da disciplina foi adequada</label>
+            <label for="cargaH"> <p class="question-text"> A carga horária da disciplina foi adequada </p> </label>
             <ul class="quiz">
                 <label
                     ><input type="radio" name="cargaH" value="1" required/><span
@@ -260,7 +231,7 @@ Lembre-se que comumente o curso de mestrado é cumprido em 4 semestres, o curso 
                 ><br>
             </ul>
 
-            <label for="tempo1"> Houve tempo suficiente para a realização de leituras e atividades solicitadas</label>
+            <label for="tempo1"> <p class="question-text"> Houve tempo suficiente para a realização de leituras e atividades solicitadas </p> </label>
             <ul class="quiz">
                 <label
                     ><input type="radio" name="tempo1" value="1" required/><span
@@ -289,7 +260,7 @@ Lembre-se que comumente o curso de mestrado é cumprido em 4 semestres, o curso 
                 ><br>
             </ul>
 
-            <label for="compreensao"> As referências recomendadas foram relevantes e contribuíram para a compreensão do conteúdo ministrado</label>
+            <label for="compreensao"> <p class="question-text"> As referências recomendadas foram relevantes e contribuíram para a compreensão do conteúdo ministrado </p> </label>
             <ul class="quiz">
                 <label
                     ><input type="radio" name="compreensao" value="1" required/><span
@@ -318,7 +289,7 @@ Lembre-se que comumente o curso de mestrado é cumprido em 4 semestres, o curso 
                 ><br>
             </ul>
 
-            <label for="CritMet"> Os critérios de avaliação foram coerentes com o conteúdo e as metodologias utilizadas</label>
+            <label for="CritMet"> <p class="question-text"> Os critérios de avaliação foram coerentes com o conteúdo e as metodologias utilizadas </p> </label>
             <ul class="quiz">
                 <label
                     ><input type="radio" name="CritMet" value="1" required/><span
@@ -347,7 +318,7 @@ Lembre-se que comumente o curso de mestrado é cumprido em 4 semestres, o curso 
                 ><br>
             </ul>
 
-            <label for="RelAt"> Foram estabelecidas relações entre os conteúdos da disciplina e campos de atuação profissional</label>
+            <label for="RelAt"> <p class="question-text"> Foram estabelecidas relações entre os conteúdos da disciplina e campos de atuação profissional </p> </label>
             <ul class="quiz">
                 <label
                     ><input type="radio" name="RelAt" value="1" required/><span
@@ -376,6 +347,527 @@ Lembre-se que comumente o curso de mestrado é cumprido em 4 semestres, o curso 
                 ><br>
             </ul>
 
+            <label for="RelPart"><p class="question-text"> Houve bom relacionamento entre os participantes da disciplina </p> </label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="RelPart" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="RelPart" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="RelPart" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="RelPart" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="RelPart" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="ContFor"><p class="question-text"> A disciplina contribuiu efetivamente para minha formação </p></label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="ContFor" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ContFor" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ContFor" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ContFor" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ContFor" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="SolConAs"> <p class="question-text"> Demonstrou sólido conhecimento dos assuntos ministrados </p></label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="SolConAs" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="SolConAs" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="SolConAs" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="SolConAs" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="SolConAs" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="EsDuv"> <p class="question-text"> Esclareceu, com segurança, as dúvidas dos alunos </p> </label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="EsDuv" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="EsDuv" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="EsDuv" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="EsDuv" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="EsDuv" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="ExPAs"><p class="question-text"> Forneceu exemplos práticos atualizados dos assuntos ministrados </p> </label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="ExPAs" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ExPAs" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ExPAs" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ExPAs" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ExPAs" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="ApIn"><p class="question-text"> Apresentou os assuntos de forma a despertar o interesse do aluno </p></label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="ApIn" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ApIn" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ApIn" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ApIn" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ApIn" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="ExClLi"><p class="question-text"> Expôs os conteúdos de forma objetiva, clara e numa linguagem acessível. </p></label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="ExClLi" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ExClLi" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ExClLi" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ExClLi" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="ExClLi" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="RelCord"><p class="question-text"> Demonstrou relacionamento cordial com os alunos Linha 6 </p> </label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="RelCord" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="RelCord" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="RelCord" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="RelCord" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="RelCord" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="IntDisc"><p class="question-text">Estimulou o interesse pela disciplina</p></label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="IntDisc" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="IntDisc" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="IntDisc" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="IntDisc" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="IntDisc" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="PrepAula"><p class="question-text">Apresentava-se bem preparado para as aulas</p></label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="PrepAula" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="PrepAula" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="PrepAula" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="PrepAula" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="PrepAula" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="EncParA"><p class="question-text">Encorajou a participação dos alunos nas aulas.</p> </label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="EncParA" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="EncParA" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="EncParA" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="EncParA" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="EncParA" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="motLeEl"><p class="question-text">Motivou para a leitura e elaboração de trabalhos práticos. </p></label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="motLeEl" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="motLeEl" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="motLeEl" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="motLeEl" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="motLeEl" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="DiscTem"><p class="question-text">Estimulou a discussão sobre o tema estudado, mostrando-se tolerante com opiniões divergentes.</p></label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="DiscTem" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="DiscTem" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="DiscTem" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="DiscTem" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="DiscTem" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="Pontual"><p class="question-text">Foi assíduo e pontual</p></label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="Pontual" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="Pontual" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="Pontual" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="Pontual" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="Pontual" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="PreReq"><p class="question-text">Eu possuía os pré-requisitos necessários para o bom aproveitamento da disciplina</p></label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="PreReq" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="PreReq" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="PreReq" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="PreReq" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="PreReq" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="Esforco"><p class="question-text">Dediquei esforço necessário à disciplina</p></label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="Esforco" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="Esforco" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="Esforco" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="Esforco" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="Esforco" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="EuPontual"><p class="question-text">Fui pontual e assíduo</p></label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="EuPontual" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="EuPontual" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="EuPontual" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="EuPontual" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="EuPontual" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
+
+            <label for="RelContOut"><p class="question-text">Procurei estabelecer relações entre o conteúdo abordado e outros conteúdos já conhecidos e/ou de outras disciplinas</p></label>
+            <ul class="quiz">
+                <label
+                    ><input type="radio" name="RelContOut" value="1" required/><span
+                        >Discordo Plenamente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="RelContOut" value="2" /><span
+                        >Discordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="RelContOut" value="3" /><span
+                        >Não Discordo nem Concordo</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="RelContOut" value="4" /><span
+                        >Concordo Parcialmente</span
+                    ></label
+                ><br>
+                <label
+                    ><input type="radio" name="RelContOut" value="5" /><span
+                        >Concordo Plenamente</span
+                    ></label
+                ><br>
+            </ul>
             <input type="submit" value="Enviar">
         </form>
     </div>
