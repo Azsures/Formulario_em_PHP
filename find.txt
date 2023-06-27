@@ -12,51 +12,37 @@
         // Lê o conteúdo atual do arquivo
         
         $conteudo = file_get_contents("materias.txt");
-        $valores = explode(",", $valor);
-        $proximo_valor = 1;
-        $ValorAtual = "";
-        $Quant = "";
-        $NewLine = "";
-        
+    
         // Procura pela chave no conteúdo
         $posicao = strpos($conteudo, $chave);
         // Se a chave existir, substitui o valor
         if ($posicao != false) {
-            $NewLine .= $chave . ":";
-            $posicaoValor = $posicao + strlen($chave) + $proximo_valor;
-            for($k = 0; $k < 24; $k++){
-                // Obtém a posição inicial do valor
-                $ValorAtual = "";
-                $Quant = "";
-                // Obtém a posição final do valor
-                
-                if ($posicaoValor < strlen($conteudo))
-                    $posicaoFinal = strpos($conteudo, ",", $posicaoValor);
-                
-                // Armazena o valor correspondente numa sub string para fazer a soma e substituição
-                for($i = $posicaoValor; $i < $posicaoFinal; $i++)
-                    $ValorAtual .= $conteudo[$i];
-                // Substitui o valor total
-                $NewLine .= strval(intval($valores[$k+2]) + intval($ValorAtual)) . ",";
-                $proximo_valor = strpos($conteudo, ",", $posicaoFinal) - $posicaoFinal;
-                $posicaoValor = $posicaoFinal + $proximo_valor + 1;
-                //$conteudo = substr_replace($conteudo, strval(intval($valor) + intval($ValorAtual)), $posicaoValor, $posicaoFinal - $posicaoValor);
-            }
-            //substitui a quantidade para um valor a mais
-            $posicaoValor = strpos($conteudo, ",:", $posicaoValor);
-            $posicaoFinal = strpos($conteudo, "\n", $posicaoValor);
+            // Obtém a posição inicial do valor
+            $posicaoValor = $posicao + strlen($chave) + 1;
+            $ValorAtual = "";
+            $Quant = "";
+            // Obtém a posição final do valor
+            $posicaoFinal = strpos($conteudo, ":", $posicaoValor);
+            
+            // Armazena o valor correspondente numa sub string para fazer a soma e substituição
             for($i = $posicaoValor; $i < $posicaoFinal; $i++)
                 $ValorAtual .= $conteudo[$i];
-            $Newline .= strval(intval($ValorAtual) + 1);
-            $conteudo = substr_replace($conteudo, $Newline, $posicao, strlen($Newline) - $posicao);
-            $NewLine = "";
+            // Substitui o valor total
+            $conteudo = substr_replace($conteudo, strval(intval($valor) + intval($ValorAtual)), $posicaoValor, $posicaoFinal - $posicaoValor);
+
+            //substitui a quantidade para um valor a mais
+
+            $posicaoValor = $posicaoFinal + 2;
+            $posicaoFinal = strpos($conteudo, "\n", $posicaoValor);
+
+            for($i = $posicaoValor; $i < $posicaoFinal; $i++)
+                $Quant .= $conteudo[$i];
+            
+            $conteudo = substr_replace($conteudo, strval(((int) $Quant))+ 1, $posicaoValor, $posicaoFinal - $posicaoValor);
         }
         else {
             // Adiciona a chave e o valor ao conteúdo
-            $conteudo .= $chave . ":";
-            for($k = 2; $k < sizeof($valores)-1; $k++)
-                $conteudo .= $valores[$k]. ",";
-            $conteudo .= ":1". "\n";
+            $conteudo .= $chave . ": " . $valor . ": 1". "\n";
         }
     
         // Escreve o conteúdo atualizado no arquivo
@@ -69,33 +55,7 @@
         $nome = $_POST["nome"];
         $curso = $_POST["matriculado"];
         $periodo = $_POST["periodo"];
-        $opiniao1 = $_POST["disciplina"];
-        $opiniao2 = $_POST["matriculado"];
-        $opiniao3 = $_POST["periodo"];
-        $opiniao4 = $_POST["estrutura"];
-        $opiniao5 = $_POST["cargaH"];
-        $opiniao6 = $_POST["tempo1"];
-        $opiniao7 = $_POST["compreensao"];
-        $opiniao8 = $_POST["CritMet"];
-        $opiniao9 = $_POST["RelAt"];
-        $opiniao10 = $_POST["RelPart"];
-        $opiniao11 = $_POST["ContFor"];
-        $opiniao12 = $_POST["SolConAs"];
-        $opiniao13 = $_POST["EsDuv"];
-        $opiniao14 = $_POST["ExPAs"];
-        $opiniao15 = $_POST["ApIn"];
-        $opiniao16 = $_POST["ExClLi"];
-        $opiniao17 = $_POST["RelCord"];
-        $opiniao18 = $_POST["IntDisc"];
-        $opiniao19 = $_POST["PrepAula"];
-        $opiniao20 = $_POST["EncParA"];
-        $opiniao21 = $_POST["motLeEl"];
-        $opiniao22 = $_POST["DiscTem"];
-        $opiniao23 = $_POST["Pontual"];
-        $opiniao24 = $_POST["PreReq"];
-        $opiniao25 = $_POST["Esforco"];
-        $opiniao26 = $_POST["EuPontual"];
-        $opiniao27 = $_POST["RelContOut"];
+        $opiniao = $_POST["opiniao"];
 
         $data = "Disciplina " . $disciplina . ", " .
                 "Nome " . $nome . ", " .
@@ -103,33 +63,8 @@
                 "Periodo ". $periodo. ", " .
                 "Opiniao " . $opiniao . ";\n";
 
-        $dados_materias =   $opiniao1 . "," .
-                            $opiniao2 . "," .
-                            $opiniao3 . "," .
-                            $opiniao4 . "," .
-                            $opiniao5 . "," .
-                            $opiniao6 . "," .
-                            $opiniao7 . "," .
-                            $opiniao8 . "," .
-                            $opiniao9 . "," .
-                            $opiniao10 . "," .
-                            $opiniao11 . "," .
-                            $opiniao12 . "," .
-                            $opiniao13 . "," .
-                            $opiniao14 . "," .
-                            $opiniao15 . "," .
-                            $opiniao16 . "," .
-                            $opiniao17 . "," .
-                            $opiniao18 . "," .
-                            $opiniao19 . "," .
-                            $opiniao20 . "," .
-                            $opiniao21 . "," .
-                            $opiniao22 . "," .
-                            $opiniao23 . "," .
-                            $opiniao24 . "," .
-                            $opiniao25 . "," .
-                            $opiniao26 . "," .
-                            $opiniao27 . "," ;
+        $dados_materias = $disciplina . "," .
+                          $opiniao . ",";
 
         // Adicione o caminho e nome do arquivo desejado
         $file = "dados.txt";
@@ -143,7 +78,7 @@
 
         // Escreve os dados no arquivo
         fwrite($handle1, $data);
-        adicionarOuSubstituirDado($estatistico, $disciplina, $dados_materias);
+        adicionarOuSubstituirDado($estatistico, $disciplina, $opiniao);
 
         // Fecha o arquivo
         fclose($handle1);
