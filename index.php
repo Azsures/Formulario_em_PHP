@@ -16,47 +16,44 @@
         $proximo_valor = 1;
         $ValorAtual = "";
         $Quant = "";
-        $NewLine = "";
+        $Nova_Linha = "";
+        $old_values = "";
+        $tamanho = 0;
         
         // Procura pela chave no conteúdo
         $posicao = strpos($conteudo, $chave);
         // Se a chave existir, substitui o valor
         if ($posicao != false) {
-            $NewLine .= $chave . ":";
-            $posicaoValor = $posicao + strlen($chave) + $proximo_valor;
-            for($k = 0; $k < 24; $k++){
-                // Obtém a posição inicial do valor
-                $ValorAtual = "";
-                $Quant = "";
-                // Obtém a posição final do valor
-                
-                if ($posicaoValor < strlen($conteudo))
-                    $posicaoFinal = strpos($conteudo, ",", $posicaoValor);
-                
-                // Armazena o valor correspondente numa sub string para fazer a soma e substituição
-                for($i = $posicaoValor; $i < $posicaoFinal; $i++)
-                    $ValorAtual .= $conteudo[$i];
-                // Substitui o valor total
-                $NewLine .= strval(intval($valores[$k+2]) + intval($ValorAtual)) . ",";
-                $proximo_valor = strpos($conteudo, ",", $posicaoFinal) - $posicaoFinal;
-                $posicaoValor = $posicaoFinal + $proximo_valor + 1;
-                //$conteudo = substr_replace($conteudo, strval(intval($valor) + intval($ValorAtual)), $posicaoValor, $posicaoFinal - $posicaoValor);
+            $Nova_Linha .= $chave . ":";
+
+            $posicaoValor = $posicao + strlen($chave) + 1;
+
+            for($i = $posicaoValor; $i < strlen($conteudo); $i++){
+                $tamanho++;
+                if($conteudo[$i] != "\n"){
+                    if($conteudo[$i] != ":")
+                        $old_values .= $conteudo[$i];
+                }
+                else{
+                    break;
+                }
             }
-            //substitui a quantidade para um valor a mais
-            $posicaoValor = strpos($conteudo, ",:", $posicaoValor);
-            $posicaoFinal = strpos($conteudo, "\n", $posicaoValor);
-            for($i = $posicaoValor; $i < $posicaoFinal; $i++)
-                $ValorAtual .= $conteudo[$i];
-            $Newline .= strval(intval($ValorAtual) + 1);
-            $conteudo = substr_replace($conteudo, $Newline, $posicao, strlen($Newline) - $posicao);
-            $NewLine = "";
+
+            $old_values_vec = explode(",", $old_values);
+
+            for($k = 3; $k < sizeof($valores)-1; $k++)
+                $Nova_Linha .= strval(intval($valores[$k]) + intval($old_values_vec[$k-3])). ",";
+            $Nova_Linha .= ":" . strval(intval($old_values_vec[sizeof($old_values_vec) - 1]) + 1);
+    
+            $conteudo = substr_replace($conteudo, $Nova_Linha, $posicao, strlen($Nova_Linha));
         }
         else {
             // Adiciona a chave e o valor ao conteúdo
             $conteudo .= $chave . ":";
-            for($k = 2; $k < sizeof($valores)-1; $k++)
+            for($k = 3; $k < sizeof($valores)-1; $k++)
                 $conteudo .= $valores[$k]. ",";
-            $conteudo .= ":1". "\n";
+            //55 spaces ate end of the line were added to prevent the string to become to long and eat next line caracters
+            $conteudo .= ":1". "                                                       \n";
         }
     
         // Escreve o conteúdo atualizado no arquivo
