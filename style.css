@@ -1,77 +1,108 @@
 body {
-    background: linear-gradient(to right, black, white);
+    /*background: linear-gradient(to right, black, white);*/
+    background: #3E4870;
 }
 .container {
-    width: 600px;
+    width: 50vw;
     height: fit-content;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   
 }
-.container input[type="text"],
-.container textarea {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-.container input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-/* Style The Dropdown Button */
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
+
+.title{
     color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #f1f1f1}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  }
-  .question-text {
-    font-size: large;
-    text-decoration: underline;
 }
+.subtitle{
+    color: black;
+    font-size: 12px;
+}
+
+/* Customizing form question */
+.form-question {
+    padding-left: 1rem;
+    margin-bottom: 10px;
+    padding-bottom: 1rem;
+    border-width:2px;
+    border-radius: 10px;
+    border-style:solid;
+    /*border-color:#121212;
+    background-color: #121212;*/
+    border-color:whitesmoke;
+    background-color: whitesmoke;
+  }
+  
+  .form-question label {
+    font-size: 12px;
+    color: black;
+  }
+  
+  .form-question input[type="text"],
+  .form-question textarea {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ccc;
+    color:black;
+    font-size: 12px;
+  }
+
+  .form-question select{
+    width: 80%;
+    padding: 8px;
+    border: 1px solid darkgray;
+    border-radius: 4px;
+    background-color: white;
+    color:black;
+    font-size: 12px;
+  }
+
+  .form-question option{
+    background-color: aliceblue;
+  }
+  
+  .form-question input[type="radio"],
+  .form-question input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+    transform: scale(1.2);
+  }
+
+
+  .form-question .checkbox-label {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .form-question .select-wrapper {
+    position: relative;
+  }
+  
+  .form-question .select-wrapper::after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  .form-question select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('dropdown-arrow.png') no-repeat right center;
+    background-size: 20px 20px;
+    padding-right: 30px;
+    cursor: pointer;
+  }
