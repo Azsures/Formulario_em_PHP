@@ -151,7 +151,7 @@
         <div class="form-question">
             <h2 class="title">Formulário Discente de Avaliação de Disciplinas</h2>
             <p class="subtitle">Prezado pós-graduando do PPGCS,
-este formulário tem a intenção de conhecer sua avaliação quanto a orientação que você tem recebido de seu Professor Orientador. Fique a vontade para se identificar ou não e sintam-se livres para tecer elogios, críticas ou sugestões fundamentadas. Queremos muito ouvir cada um de vocês.
+este formulário tem a intenção de conhecer sua avaliação quanto às disciplinas ministradas. Fique à vontade para se identificar ou não e sintam-se livres para tecer elogios, críticas ou sugestões fundamentadas. Queremos muito ouvir cada um de vocês.
 Atenciosamente,
 Comissão de Ensino do PPGCS <br><br>
 
@@ -159,6 +159,13 @@ OBS: Este formulário APENAS deverá ser preenchido por pos-graduandos regularme
         </div>
 
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+
+            <div class="form-question">
+                <label for="nome">Identificação: (Opcional)</label>
+                <br>
+                <br>
+                <input type="text" id="nome" name="nome">
+            </div>
 
             <div class="form-question">
                 <label for="disciplina">Escolha a disciplina:</label> <br><br>
@@ -178,10 +185,6 @@ OBS: Este formulário APENAS deverá ser preenchido por pos-graduandos regularme
                     <option value="Estudos em Saude">Estudos Interdisplinares em Saúde</option>
                     <option value="Avaliacao critica">Avaliação crítica de projetos de pesquisa e artigos científicos</option>
                 </select>
-            </div>
-            <div class="form-question">
-                <label for="nome">Identificação: (Opcional)</label>
-                <input type="text" id="nome" name="nome">
             </div>
             <div class="form-question">
                 <label for="matriculado"> <p class="question-text"> Você está atualmente matriculado em: </p> </label>
@@ -970,7 +973,7 @@ OBS: Este formulário APENAS deverá ser preenchido por pos-graduandos regularme
                     ><br>
                 </ul>
             </div>
-            
+
             <input type="submit" value="Enviar">
         </form>
     </div>

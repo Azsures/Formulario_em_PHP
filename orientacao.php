@@ -105,7 +105,7 @@
         <div class="form-question">
             <h2 class="title" >Formulário Discente de Avaliação da Orientação</h2>
             <p class="subtitle">Prezado pós-graduando do PPGCS,
-este formulário tem a intenção de conhecer sua avaliação quanto a orientação que você tem recebido de seu Professor Orientador. Fique a vontade para se identificar ou não e sintam-se livres para tecer elogios, críticas ou sugestões fundamentadas. Queremos muito ouvir cada um de vocês.
+este formulário tem a intenção de conhecer sua avaliação quanto a orientação que você tem recebido de seu Professor Orientador. Fique à vontade para se identificar ou não e sintam-se livres para tecer elogios, críticas ou sugestões fundamentadas. Queremos muito ouvir cada um de vocês.
 Atenciosamente,
 Comissão de Ensino do PPGCS <br><br>
 
